@@ -18,12 +18,12 @@ const MugShot = props => {
   };
 
   return (
-    <div>
+    <div className="mug-shot">
       {props.mugShot ? (
-        <img className="mugshot" src={props.mugShot.location} alt="mug shot" />
+        <img src={props.mugShot.location} alt="mug shot" />
       ) : (
-        <Dropzone multiple={false} accept="image/*" onDrop={onDrop}>
-          <p>Drop an image or click to select a file to upload.</p>
+        <Dropzone className="dropzone" multiple={false} accept="image/*" onDrop={onDrop}>
+          <img src="batsilh.jpg" alt="placeholder image" />
         </Dropzone>
       )}
     </div>

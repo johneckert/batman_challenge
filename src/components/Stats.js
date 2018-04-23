@@ -2,7 +2,7 @@ import React from 'react';
 
 const Stats = props => {
   return (
-    <div>
+    <div className="stats">
       <ul>
         <li>
           <span className="label">Suspect: </span>
@@ -12,11 +12,7 @@ const Stats = props => {
           <span className="label">Probability: </span>
           <span className="data">{props.mugShot.percent_match}%</span>
         </li>
-        {props.status ? (
-          <li>
-            <span className="status">{props.status}</span>
-          </li>
-        ) : null}
+        {props.status ? <li className="status">{props.status}</li> : null}
       </ul>
     </div>
   );

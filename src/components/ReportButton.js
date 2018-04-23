@@ -6,7 +6,11 @@ const ReportButton = props => {
     props.reportSuspect();
   };
 
-  return <button onClick={handleClick}>Report</button>;
+  return (
+    <button className="report-button" onClick={handleClick}>
+      Report
+    </button>
+  );
 };
 
 export default ReportButton;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReportButton from '../components/ReportButton';
 import Stats from '../components/Stats';
 import MugShot from '../components/MugShot';
+import Header from '../components/Header';
 
 class MainContainer extends Component {
   state = {
@@ -48,8 +49,8 @@ class MainContainer extends Component {
   render() {
     console.log('state', this.state.userImage);
     return (
-      <div>
-        MAin Container
+      <div className="container">
+        <Header />
         <MugShot
           mugShot={this.state.mugShot}
           setUserImage={this.setUserImage}
