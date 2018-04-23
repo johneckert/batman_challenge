@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Stats = props => {
   return (
@@ -12,6 +12,11 @@ const Stats = props => {
           <span className="label">Probability: </span>
           <span className="data">{props.mugShot.percent_match}%</span>
         </li>
+        {props.status ? (
+          <li>
+            <span className="status">{props.status}</span>
+          </li>
+        ) : null}
       </ul>
     </div>
   );

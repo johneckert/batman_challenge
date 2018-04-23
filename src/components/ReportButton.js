@@ -1,7 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const ReportButton = props => {
-  return <button>Report</button>;
+  const handleClick = event => {
+    event.preventDefault();
+    props.reportSuspect();
+  };
+
+  return <button onClick={handleClick}>Report</button>;
 };
 
 export default ReportButton;

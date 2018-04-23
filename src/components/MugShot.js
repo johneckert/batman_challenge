@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Dropzone from 'react-dropzone';
 
 const MugShot = props => {
@@ -7,7 +7,9 @@ const MugShot = props => {
     const reader = new FileReader();
     reader.onload = () => {
       const imgBase64 = reader.result;
+      console.log(imgBase64);
       props.setUserImage(imgBase64);
+      props.recordConverted(imgBase64);
     };
     reader.onabort = () => console.log('file reading was aborted');
     reader.onerror = () => console.log('file reading has failed');
